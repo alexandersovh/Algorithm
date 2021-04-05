@@ -4,36 +4,24 @@
     using System.Threading;
 
     /// <summary>
-    /// 
+    /// Application start.
     /// </summary>
-    class Program
+    public class Program
     {
         /// <summary>
-        /// Get array and sets user
+        /// Get array and sets user.
         /// </summary>
-        /// <param name="args"></param>
-        static void Main(string[] args)
+        /// <param name="args"> Args method.</param>
+        private static void Main(string[] args)
         {
-            User user1 = new User(
-                "Vasy",
-                "Василий",
-                true
-                );
-            User user2 = new User(
-                "bijg12354",
-                "Александр",
-                false
-                );
-            User user3 = new User(
-                "alsd245",
-                "Евгений",
-                true
-                );
-            User user4 = new User(
-                "Princ",
-                "Рой",
-                true
-                );
+            User user1 = new User("Vasy", "Василий", true);
+
+            User user2 = new User("bijg12354", "Александр", false);
+
+            User user3 = new User("alsd245", "Евгений", true);
+
+            User user4 = new User("Princ", "Рой", true);
+
             User[] userArr = new User[] { user1, user2, user3, user4 };
 
             for (int i = 0; i < userArr.Length; i++)
@@ -44,7 +32,9 @@
                     ShowAds();
                 }
             }
+
             Console.WriteLine("для остановки нажмите Enter");
+
             Console.ReadKey();
         }
 
